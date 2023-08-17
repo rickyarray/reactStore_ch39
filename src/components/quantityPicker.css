@@ -5,5 +5,15 @@
 }
 
 .qt-picker button{
-    background-color: rgb(213, 255, 44);
+    /* background-color: rgb(213, 255, 44); */
+        background-color: #f57224;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+    
+    .qt-picker button:hover {
+        background-color: #d1550d;
 }

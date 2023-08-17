@@ -17,4 +17,4 @@ git push -u origin master
 ### Push future times
 git add .
 git commit -m "ANY Message"
-git puh
+git push
