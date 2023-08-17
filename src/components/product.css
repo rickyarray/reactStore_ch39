@@ -1,0 +1,30 @@
+.product {
+    display: inline-block;
+    margin: 6px 9px;
+    border: 1.5px solid #6a6a6a;
+    width: 240px;
+    height: 330px;
+    border-radius: 4px;
+}
+
+.product:hover {
+    border-color: aquamarine;
+}
+
+.product img
+{
+    width: 220px;
+    height: 190px;
+    margin-top: 10px;
+}
+.product .prices
+{
+    display: flex;
+}
+
+.product .prices label
+{
+    flex: 1;
+    padding-bottom: 6px;
+    font-style: italic  ;
+}

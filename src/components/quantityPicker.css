@@ -1,0 +1,9 @@
+.qt-picker label{
+    display: inline;
+    margin: 0 6px;
+    font-weight: 750;
+}
+
+.qt-picker button{
+    background-color: rgb(213, 255, 44);
+}
