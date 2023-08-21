@@ -1,1 +1,11 @@
 
+.navbar {
+    background-color: rgb(172, 134, 84);
+}
+
+.navbar .user-info {
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    margin-right: 10px;
+}
