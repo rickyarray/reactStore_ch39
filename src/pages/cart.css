@@ -4,3 +4,14 @@
     padding-top: 180px;
     background-color: bisque;
 }
+.cart .parent {
+    display: flex;
+}
+
+.cart .parent .list {
+    flex: 3;
+}
+
+.cart .parent .side-menu {
+    flex: 1;
+}

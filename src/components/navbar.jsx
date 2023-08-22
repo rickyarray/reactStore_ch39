@@ -8,6 +8,15 @@ function NavBar(){
   const user = useContext(DataContext).user;
   const cart = useContext(DataContext).cart;
 
+function getProductCount() {
+  let total = 0;
+  for(let i=0; i<cart.length; i++) {
+    let prod = cart[i];
+total += prod.quantity;
+  }
+  return total;
+}
+
     return(
         <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
         <div className="container-fluid">
@@ -37,7 +46,7 @@ function NavBar(){
             <label>{user.name}</label>
             </div>
             <Link className='btn btn-outline-success' to="/cart">
-              {cart.length}
+              {getProductCount()}
               <i className="fa-solid fa-cart-shopping"></i>
             </Link>
           </form>

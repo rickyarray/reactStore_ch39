@@ -1,0 +1,24 @@
+.product-cart {
+    border: 2.5px solid orange;
+    border-radius: 6px;
+    padding: 6px;
+    margin: 8px 16px;
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.product-cart img {
+    width: 110px;
+    height: 100px;
+}
+
+.product-cart div {
+    flex: 6;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.product-cart label {
+    flex: 1;
+}
