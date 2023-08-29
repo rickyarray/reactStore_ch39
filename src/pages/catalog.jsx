@@ -32,7 +32,7 @@ function Catalog() {
                 setProducts(prods);
 
                 // Updated categories
-                let cats = ["Shirts", "Shorts", "Shoes", "outerwear", "accessories", "fruit"];
+                let cats = await service.getCatagories();
                 setCategories(cats);
 
                 setProdsToDisplay(prods); // Display all products by default

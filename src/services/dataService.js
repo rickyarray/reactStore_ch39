@@ -1,3 +1,5 @@
+import axios from "axios";
+
 let catalog =[
 {
     "title": "Graphic Tee", //example
@@ -59,9 +61,25 @@ let catalog =[
 ]
 
 class DataService {
+    serverURL = "http://127.0.0.1:5000";
 
-    getProducts() {
-        return catalog;
+    async getProducts() {
+        //***Uncomment next line to work with local data***
+        //return catalog;
+
+        //call the server
+        const response = await axios.get (this.serverURL + '/api/products');
+        return response.data;
+    }
+
+    async getCatagories() {
+        const response = await axios.get(this.serverURL + "/api/categories");
+        return response.data;
+    }
+
+    async saveProduct(prod) {
+        const response = await axios.post(this.serverURL +'/api/products', prod);
+        return response.data;
     }
 }
 

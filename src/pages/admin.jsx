@@ -1,8 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./admin.css";
+import DataService from "../services/dataService";
+
+
 
 function Admin() {
     const [product, setProduct] = useState({});
+    const [allProducts, setAllProducts] = useState([]);
+
+useEffect(function() {
+    loadData();
+
+}, []);
+
+async function loadData() {
+    let service = new DataService();
+    const prods = await service.getProducts();
+    setAllProducts(prods);
+}
 
     function handleInputChange(e) {
         console.log(e.target.value);
@@ -18,7 +33,16 @@ function Admin() {
 
     function saveProduct() {
         console.log(product);
+
+//save to server
+        let copy = {...product};
+        copy.price = parseFloat(copy.price);
+        let service = new DataService();
+        service.saveProduct(copy);
+
+
     }
+
 
     return (
         <div className="admin page">
@@ -48,10 +72,19 @@ function Admin() {
 
                 <button onClick={saveProduct} className="btn btn-dark">Save Product</button>
 
+                <hr />
+                <ul className="product-list">
+                    {allProducts.map(prod => <li key={prod._id}> {prod.title} ${prod.price} <button className="btn btn-sm btn-danger">Remove</button>
+</li>)}
+                </ul>
+                
             </div>
+
+           
         </div>
     )
 }
+
 
 export default Admin;
 
