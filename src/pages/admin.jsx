@@ -7,7 +7,16 @@ import DataService from "../services/dataService";
 function Admin() {
     const [product, setProduct] = useState({});
     const [allProducts, setAllProducts] = useState([]);
+    const [coupons, setCoupon] = useState([])
 
+
+/**
+ * coupon state var (code and discount)
+ * handleCouponChange see line 30-39
+ * the form to create a new coupon .. see the <div>
+ *      the fields should call the handleCouponChange
+ *      the fields 
+ */
 useEffect(function() {
     loadData();
 
@@ -26,9 +35,28 @@ async function loadData() {
         
 
         // create copy, modify it, set it back
-        let copy = {...product};
+        let copy = {...coupons};
         copy[name] = val;
         setProduct(copy);
+    }
+
+
+    function handleCouponChange(e) {
+        console.log(e.target.value);
+        const val = e.target.value;
+        let name = e.target.name;
+        
+
+        // create copy, modify it, set it back
+        let copy = {...product};
+        copy[name] = val;
+        setCoupon(copy);
+    }
+
+
+    function saveCoupon() {
+        let service = new DataService();
+        service.saveCoupon(coupons);
     }
 
     function saveProduct() {
@@ -40,6 +68,14 @@ async function loadData() {
         let service = new DataService();
         service.saveProduct(copy);
 
+
+    }
+
+    function removeProduct(id) {
+        let service = new DataService();
+        service.deleteProduct(id);
+
+        let copy = allProducts.filter(prod => prod._id !== id);
 
     }
 
@@ -74,13 +110,24 @@ async function loadData() {
 
                 <hr />
                 <ul className="product-list">
-                    {allProducts.map(prod => <li key={prod._id}> {prod.title} ${prod.price} <button className="btn btn-sm btn-danger">Remove</button>
-</li>)}
+                    {allProducts.map(prod => <li key={prod._id}> {prod.title} ${prod.price} 
+                    <button onClick={() => removeProduct(prod._id)}className="btn btn-sm btn-danger">Remove</button></li>)}
                 </ul>
                 
             </div>
+            
+            <div className="coupon-form">
+                    <label className="form-label">Code</label>
+                    <input onChange={handleCouponChange} name="code" type="text" className="form-control"/>
 
-           
+                    <label className="form-label">Discount</label>
+                    <input onChange={handleCouponChange} name="discount" type="text" className="form-control"/>
+
+                    <button onClick={saveCoupon} className="btn btn-dark">Save Coupon</button>
+                </div>
+                        
+                
+
         </div>
     )
 }

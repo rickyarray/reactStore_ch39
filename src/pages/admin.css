@@ -14,3 +14,10 @@ button {
     padding-top: 10px;
     text-align: center;
 }
+.coupon-form {
+    width: 350px;
+    border: 2.5px solid orange;
+    padding: 10px;
+    margin-left: 55px;
+    text-align: left;
+}

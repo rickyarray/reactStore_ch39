@@ -81,6 +81,17 @@ class DataService {
         const response = await axios.post(this.serverURL +'/api/products', prod);
         return response.data;
     }
+
+    async saveCoupon(coupon) {
+        const response = await axios.post(this.serverURL +'/api/coupons', coupon);
+        return response.data;
+    }
+
+
+    async deleteProduct(id) {
+        const response = await axios.delete(this.serverURL + '/api/products/id/' + id);
+        return response.data;
+    }
 }
 
 export default DataService;
