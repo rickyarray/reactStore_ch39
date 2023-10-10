@@ -17,47 +17,28 @@ total += prod.quantity;
   return total;
 }
 
-    return(
-        <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
-            Home
-          </Link>
+return (
+  <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
+      <div className="container-fluid d-flex justify-content-between">
+          <div className="d-flex">
+              <Link className="navbar-brand" to="/">Home</Link>
+              <Link className="navbar-brand" to="/Catalog">Catalog</Link>
+              <Link className="navbar-brand" to="/About">About</Link>
           </div>
 
-        <li className='nav-item'>
-          <Link className='nav-link active' aria-current="page" to="/admin">
-            Admin
-          </Link>
-        </li>
-        
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/Catalog">
-            Catelog
-          </Link>
-
-          <div className="container-fluid">
-          <Link className="navbar-brand" to="/About">
-            About
-          </Link>
-
-          <form className="d-flex" role="search">
-            <div className="user-info">
-            <label>{user.name}</label>
-            </div>
-            <Link className='btn btn-outline-success' to="/cart">
-              {getProductCount()}
-              <i className="fa-solid fa-cart-shopping"></i>
-            </Link>
-          </form>
-      
-
-            </div>
+          <div className="d-flex align-items-center">
+              <div className="user-info">
+                  <label>{user.name}</label>
+              </div>
+              <Link className="btn btn-outline-success" to="/cart">
+                  {getProductCount()}
+                  <i className="fa-solid fa-cart-shopping"></i>
+              </Link>
+              <Link className="nav-link active" aria-current="page" to="/admin">Admin</Link>
           </div>
-        </nav>
-
-      
-    );
+      </div>
+  </nav>
+);
 }
 
 export default NavBar;

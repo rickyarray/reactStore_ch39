@@ -1,14 +1,80 @@
+/* about.css */
 
-.about {
+@import url('https://fonts.googleapis.com/css2?family=Azo+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
 
-    padding-top: 140px;
+/* General styling for the about page */
+.about.page {
+    font-family: 'Azo-Sans', sans-serif;
+    background-color: #2a2a2a;
+    /* Darker background for a street vibe */
+    padding: 60px;
+    max-width: 900px;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    /* Deeper shadow for depth */
+    border: 3px solid #FFD700;
+    /* Gold border for elegance */
+    position: relative;
+    overflow: hidden;
 }
 
-.about h1{
-    text-align: center;
-    color: aliceblue;
+/* Styling for the secondary header */
+.about.page h5 {
+    font-size: 20px;
+    color: #FFD700;
+    /* Gold for elegance */
+    margin-bottom: 15px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background-color: #000;
+    /* Black background for contrast */
+    display: inline-block;
+    padding: 5px 10px;
 }
-.about h5 {
-    text-align: center;
-    color: rgb(250, 247, 50);
+
+/* Styling for the main header */
+.about.page h1 {
+    font-size: 42px;
+    /* Reduced font size */
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Dancing Script', cursive;
+    /* Signature-like font */
+    background-color: #FFD700;
+    /* Gold background for the name */
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+/* Styling for the main content paragraph */
+.about.page p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #bfbfbf;
+    text-align: justify;
+    text-indent: 30px;
+    margin-bottom: 20px;
+    /* Added spacing between paragraphs */
+    border-left: 4px solid #FFD700;
+    padding-left: 20px;
+    position: relative;
+}
+
+.about.page p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #FFD700, #2a2a2a, #FFD700);
+}
+/* Adding some hover effects for interactivity */
+.about.page:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
 }

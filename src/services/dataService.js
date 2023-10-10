@@ -65,7 +65,7 @@ class DataService {
 
     async getProducts() {
         //***Uncomment next line to work with local data***
-        //return catalog;
+        return catalog;
 
         //call the server
         const response = await axios.get (this.serverURL + '/api/products');

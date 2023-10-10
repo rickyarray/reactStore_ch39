@@ -32,7 +32,7 @@ function Catalog() {
                 setProducts(prods);
 
                 // Updated categories
-                let cats = await service.getCatagories();
+                let cats = await service.getCategories();
                 setCategories(cats);
 
                 setProdsToDisplay(prods); // Display all products by default

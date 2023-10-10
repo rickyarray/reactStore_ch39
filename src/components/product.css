@@ -1,40 +1,61 @@
 .product {
     display: inline-block;
     margin: 6px 9px;
-    border: 1.5px solid #6a6a6a;
+    border: 1.5px solid #FFD700;
     width: 240px;
-    height: 330px;
+    height: 375px;
     border-radius: 4px;
+    background-color: #f8f8f8;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product h5 {
-    font-size: 16px;
+    font-size: 22px;
+        font-weight: bold;
     margin-bottom: 10px;
-}
-.product:hover {
-    border-color: aquamarine;
+    color: #333;
 }
 
-.product img
-{
+.product:hover {
+    border-color: #FFC400;
+        transform: scale(1.05);
+}
+
+.product img {
     width: 220px;
     height: 190px;
     margin-top: 10px;
+    border-radius: 4px;
 }
-.product .prices
-{
+.product .prices {
     display: flex;
     justify-content: space-between;
-        align-items: center;
+    align-items: center;
         margin-bottom: 10px;
         font-size: 14px;
-        color: #333;
+    color: #555;
 }
 
-.product .prices label
-{
+.product .prices label {
     flex: 1;
-    padding-bottom: 6px;
-    font-style: italic  ;
+    padding-bottom: 2px;
+        font-style: italic;
     font-weight: bold;
+    font-size: 16px;
+    }
+    
+    .product button {
+        margin-top: 10px;
+        background-color: #1d1d1d;
+        color: #FFD700;
+        border: none;
+        padding: 6px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .product button:hover {
+        background-color: #333;
 }
