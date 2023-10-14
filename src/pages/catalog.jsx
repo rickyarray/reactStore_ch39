@@ -32,8 +32,10 @@ function Catalog() {
                 setProducts(prods);
 
                 // Updated categories
-                let cats = await service.getCategories();
+                let cats = service.getCategoriesFromLocalData();
+                console.log("Fetched categories from local data:", cats);
                 setCategories(cats);
+
 
                 setProdsToDisplay(prods); // Display all products by default
             } else {
@@ -59,7 +61,7 @@ function Catalog() {
 
     return (
         <div className="catalog">
-            <h1>Check out our {products.length} amazing products in our catalog</h1>
+            <h2>Check out our {products.length} amazing products in our catalog</h2>
             <br />
 
             <button onClick={clearFilter} className="btn btn-sm btn-dark btn-filter">

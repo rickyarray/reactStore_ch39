@@ -10,33 +10,32 @@ li {
 }
 
 a {
+    font-size: 20px;
     text-decoration: none;
     color: #FFFFFF;
-        /* White font color */
-        padding: 5px 10px;
+    padding: 5px 10px;
         transition: background-color 0.3s ease, border 0.3s ease;
     }
     
-    a:hover {
-        background-color: #006400;
-        /* Dark green background on hover */
-        border: 2px solid #000000;
-        /* Black border on hover */
-        border-radius: 5px;
+.footer-bottom a:hover {
+    color: #000 !important;
+    font-size: 1.05em;
+    border: 2px solid #FFD700;
+    border-radius: 5px;
 }
 
 .footer-bottom {
     background-color: #8B6914;
-        /* Rich gold background */
     margin-top: 10px;
     text-align: center;
     padding: 10px 0;
 }
 
 .footer-bottom p {
-    font-size: 14px;
-    color: #FFFFFF;
-        /* White font color */
+    font-size: 18px;
+        font-style: italic;
+        font-weight: 550;
+        color: #000;
 }
 .footer-bottom a {
     color: #FFFFFF !important;

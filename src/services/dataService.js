@@ -3,20 +3,20 @@ import axios from "axios";
 let catalog =[
 {
     "title": "Graphic Tee", //example
-    "category": "Shirts",
+    "category": "Tops",
     "price": 29.00,
     "image": "oversizedTee.jpeg", //find image to asssociate w/product (./images)
     "id": "1",
 },
 {
     "title": "Athletic Shorts",
-    "category": "Shorts",
+    "category": "Bottoms",
     "price": 24.95,
     "image": "shorts.jpeg",
     "id": "2",
 },
 {
-    "title": "Nike",
+    "title": "Nike Low",
     "category": "Shoes",
     "price": 130.95,
     "image": "shoes.jpeg",
@@ -24,37 +24,37 @@ let catalog =[
 },
 {
     "title": "Anime Hoodie",
-    "category": "outerwear",
+    "category": "Tops",
     "price": 24.95,
     "image": "hoodie.jpeg",
     "id": "4",
 },
 {
-    "title": "Straight pant",
-    "category": "jeans",
-    "price": 29.95,
-    "image": "pants.jpeg",
+    "title": "Straight Cargo Pant",
+    "category": "Bottoms",
+    "price": 34.95,
+    "image": "CargoPant.png",
     "id": "5",
 },
 {
     "title": "Denim Jacket",
-    "category": "outerwear",
-    "price": 44.95,
+    "category": "Tops",
+    "price": 49.95,
     "image": "jacket.jpeg",
     "id": "6",
 },
 {
-    "title": "Orange",
-    "category": "fruit",
-    "price": 16.98,
-    "image": "orange.png",
+    "title": "Warner - Mexico tee",
+    "category": "Tees",
+    "price": 29.98,
+    "image": "WarnerTee.png",
     "id": "7",
 },
 {
-    "title": "Orange",
-    "category": "fruit",
-    "price": 16.98,
-    "image": "orange.png",
+    "title": "49ers Oversized Tee",
+    "category": "Tees",
+    "price": 34.98,
+    "image": "49ersTee.png",
     "id": "8",
 }
 
@@ -72,10 +72,17 @@ class DataService {
         return response.data;
     }
 
-    async getCatagories() {
+    async getCategories() {
         const response = await axios.get(this.serverURL + "/api/categories");
         return response.data;
     }
+
+    getCategoriesFromLocalData() {
+        // Extract unique categories from the catalog array
+        const uniqueCategories = [...new Set(catalog.map(item => item.category))];
+        return uniqueCategories;
+    }
+    
 
     async saveProduct(prod) {
         const response = await axios.post(this.serverURL +'/api/products', prod);

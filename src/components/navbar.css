@@ -1,37 +1,25 @@
 /* Base Navbar Styles */
 .navbar {
     background-color: #006400;
-    /* Dark green */
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-    font-family: 'Arial', sans-serif;
-    /* A clean, readable font */
+    font-family: 'Azo sans', sans-serif;
 }
 
 .navbar-brand,
 .nav-link {
     color: #FFFFFF !important;
-    /* White text for clarity */
-    font-weight: 600;
-    /* Semi-bold text */
+    font-weight: 500;
     text-transform: uppercase;
-    /* Uppercase letters for a structured look */
     transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
-    /* Smooth transition for hover effects */
 }
 
 .navbar-brand:hover,
 .nav-link:hover {
-    color: #006400 !important;
-    /* Dark green text on hover */
-    background-color: #8B6914;
-    /* Richer gold background on hover */
-    border: 2px solid #FFD700;
-    /* Hyper gold border on hover */
+    color: #FFD700 !important;
+        border: 2px solid #000;
     border-radius: 5px;
-    /* Rounded corners for hover effect */
     padding: 3px 8px;
-    /* Adjusted padding to account for the border */
+
 }
 
 /* User Info Styles */
@@ -58,37 +46,27 @@
 
 /* Cart Icon Styles */
 .btn.btn-outline-success {
-    background-color: #FFFFFF;
-    /* White background for the cart button */
-    color: #007BFF !important;
-    /* Vibrant blue text/icon */
+background-color: #000;
+    color: #FFD700 !important;
     border: none;
-    /* Remove the default border */
-    transition: background-color 0.3s ease;
-    /* Smooth transition for hover effects */
+transition: background-color 0.3s ease;
 }
 
 .btn.btn-outline-success:hover {
-    color: #006400 !important;
-    /* Dark green text/icon on hover */
-    background-color: #8B6914;
-    /* Richer gold background on hover */
-    border: 2px solid #FFD700;
-    /* Hyper gold border on hover */
+color: #000 !important;
+    background-color: #FFD700;
+    border: 2px solid #000;
 }
 
 .fa-solid.fa-cart-shopping {
-    margin-left: 5px;
-    /* Spacing between the product count and the cart icon */
+margin-left: 5px;
 }
 
 .navbar-brand,
 .nav-link {
-    margin: 0 15px;
-    /* Even spacing on both sides */
+margin: 0 15px;
 }
 
 .user-info {
-    margin-right: 15px;
-    /* Consistent spacing next to the cart button */
+margin-right: 15px;
 }

@@ -1,3 +1,61 @@
+/* styles.css or styles.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+.catalog {
+    background-color: #000000;
+}
 .catalog .btn-filter{
+    color: #FFD700;
+        background-color: #8B6914;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    
+    .catalog .btn-filter:hover {
+        border: 2px solid #FFD700;
+        border-radius: 5px;
+    }
+    
+    .catalog h1 {
+        background-color: #000;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: bold;
+        color: #FFD700;
+        padding-top: 15px;
+        padding-bottom: 5px;
+    }
+    
+    .catalog h2 {
+        font-family: 'Noto Sans', sans-serif;
+        font-style: italic;
+        font-size: 22px;
+        padding-top: 10px;
+        color: #FFF;
+    }
+    
+    
+    .btn-filter {
+        background-color: #FFD700;
+        color: white;
+        border: none;
+        padding: 10px 20px;
     margin: 5px;
+    border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .btn-filter:hover {
+        background-color: #FFD700;
+    }
+    
+    .btn-primary.btn-filter {
+        color: #FFD700;
+        background-color: #8B6914;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    
+    .btn-primary.btn-filter:hover {
+        border: 2px solid #FFD700;
+        border-radius: 5px;
 }
