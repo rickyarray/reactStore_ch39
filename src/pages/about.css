@@ -5,12 +5,8 @@
 /* General styling for the about page */
 .about.page {
     font-family: 'Azo-Sans', sans-serif;
-    background-color: #1a1a1a;
-        /* Deep, rich black background */
-        padding: 60px 5% 60px 8%;
-        /* Golden ratio padding */
-        max-width: 1200px;
-    margin: 50px auto;
+    background-image: url('./heroimage/fm_tag.png');
+        /* margin: 50px auto; */
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         /* Subtle shadow for depth */

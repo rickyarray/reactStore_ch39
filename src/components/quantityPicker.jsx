@@ -1,4 +1,4 @@
-// create the coomponet and render a button 
+// create the componet and render a button 
 import "./quantityPicker.css";
 import { useState } from "react"; //this allows 'state variables: are global'
 

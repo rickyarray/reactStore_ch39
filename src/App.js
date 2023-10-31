@@ -23,7 +23,7 @@ function App() {
     <BrowserRouter>
     <div className="App">
       <NavBar/>
-      <h1>Colors Unleashed: Stand Out in Style!</h1>
+    
 
 <Routes>
   <Route path='/' element={ <Home /> } />

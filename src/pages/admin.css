@@ -3,7 +3,7 @@
     padding-top: 10px;
 }
 .admin .parent-container {
-    width: 350px;
+    width: 850px;
     border: 2.5px solid orange;
     padding: 10px;
     margin-left: 55px;
@@ -20,4 +20,7 @@ button {
     padding: 10px;
     margin-left: 55px;
     text-align: left;
+}
+.btnbtn-dark {
+    padding-top: 9px;
 }

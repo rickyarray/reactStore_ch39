@@ -1,6 +1,6 @@
 /* Base Navbar Styles */
 .navbar {
-    background-color: #006400;
+    background-color: #ff7200;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     font-family: 'Azo sans', sans-serif;
 }
@@ -69,4 +69,26 @@ margin: 0 15px;
 
 .user-info {
 margin-right: 15px;
+}
+.cls-1 {
+    fill: #4f4d4b;
+}
+
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4 {
+    stroke-width: 0px;
+}
+
+.cls-2 {
+    fill: #231f20;
+}
+
+.cls-3 {
+    fill: #8b6a29;
+}
+
+.cls-4 {
+    fill: #ff7200;
 }

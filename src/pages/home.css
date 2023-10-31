@@ -8,6 +8,17 @@
     justify-content: center;
 }
 
+.hero-section {
+    background-image: url('./heroimage/flymerch_hero.png');
+    /* Adjust this path as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 950px;
+    /* You can adjust the height */
+    width: 100%;
+    /* Take up the full width of the parent container */
+}
 h1 {
     margin-top: 0;
 }
@@ -21,10 +32,11 @@ h1 {
     text-align: center;
 }
 
+
 .content {
     margin-top: 2rem;
     width: 80%;
-    background-color: #fff;
+    background-color: #ff7200;
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
